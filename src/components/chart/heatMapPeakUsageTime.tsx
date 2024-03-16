@@ -1,7 +1,11 @@
+import cx from 'classnames'
 import PeakUsageTime from '../../assets/peak-usage-time.png'
 
-const HeatmapPeakUsageTime = () => {
-  return <img src={PeakUsageTime} alt="" />
+interface Props {
+  className?: string
+}
+const HeatmapPeakUsageTime = ({ className }: Props) => {
+  return <img src={PeakUsageTime} className={cx(className)} alt="" />
 }
 
 export default HeatmapPeakUsageTime

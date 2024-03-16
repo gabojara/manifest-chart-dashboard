@@ -1,10 +1,12 @@
+import cx from 'classnames'
 import EfficacyMeasurementsImage from '../../../assets/efficacy-measurements.png'
 
-const EfficacyMeasurements = () => {
+interface Props {
+  className?: string
+}
+const EfficacyMeasurements = ({ className }: Props) => {
   return (
-    <div>
-      <img src={EfficacyMeasurementsImage} alt="" />
-    </div>
+    <img src={EfficacyMeasurementsImage} className={cx(className)} alt="" />
   )
 }
 

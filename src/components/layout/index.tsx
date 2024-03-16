@@ -7,9 +7,9 @@ interface Props {
 export const Layout = ({ children }: Props) => {
   return (
     <div className="w-full overflow-x-hidden">
-      <Header />
+      <Header className="fixed top-0 z-[999] opacity-90" />
       {children}
-      <Footer />
+      <Footer className="fixed bottom-0 z-[999] opacity-90" />
     </div>
   )
 }

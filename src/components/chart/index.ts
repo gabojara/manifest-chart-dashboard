@@ -1,3 +1,4 @@
+export { default as ActiveStudents } from './activeStudents'
 export { default as AreaSessionLength } from './areaSessionLength'
 export { default as AreaTotalSessions } from './areaTotalSessions'
 export { default as ColumnAverageSession } from './columnAverageSession'

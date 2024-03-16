@@ -6,7 +6,7 @@ interface Props {
 }
 export const Layout = ({ children }: Props) => {
   return (
-    <div>
+    <div className="w-full overflow-x-hidden">
       <Header />
       {children}
       <Footer />

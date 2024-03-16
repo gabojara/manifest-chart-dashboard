@@ -361,10 +361,12 @@ const defaultProps = {
   selection: 'one_year',
 }
 
-const AreaTotalSessions = (props: AreaTotalSessionsPropType = defaultProps) => {
-  const [options] = useState(props.options)
-  const [series] = useState(props.series)
-  const [timeline, setTimeline] = useState(props.selection)
+const AreaTotalSessions = ({
+  options = defaultProps.options,
+  series = defaultProps.series,
+  selection = defaultProps.selection,
+}: AreaTotalSessionsPropType) => {
+  const [timeline, setTimeline] = useState(selection)
 
   useEffect(() => {
     switch (timeline) {
@@ -413,48 +415,46 @@ const AreaTotalSessions = (props: AreaTotalSessionsPropType = defaultProps) => {
   }, [timeline])
 
   return (
-    <div>
-      <div id="chart">
-        <button
-          id="one_month"
-          onClick={() => setTimeline('one_month')}
-          className={timeline === 'one_month' ? 'bg-[blue]' : ''}
-        >
-          1M
-        </button>
+    <div className="w-full">
+      <button
+        id="one_month"
+        onClick={() => setTimeline('one_month')}
+        className={timeline === 'one_month' ? 'bg-[blue]' : ''}
+      >
+        1M
+      </button>
 
-        <button
-          id="six_months"
-          onClick={() => setTimeline('six_months')}
-          className={timeline === 'six_months' ? 'bg-[blue]' : ''}
-        >
-          6M
-        </button>
+      <button
+        id="six_months"
+        onClick={() => setTimeline('six_months')}
+        className={timeline === 'six_months' ? 'bg-[blue]' : ''}
+      >
+        6M
+      </button>
 
-        <button
-          id="one_year"
-          onClick={() => setTimeline('one_year')}
-          className={timeline === 'one_year' ? 'bg-[blue]' : ''}
-        >
-          1Y
-        </button>
+      <button
+        id="one_year"
+        onClick={() => setTimeline('one_year')}
+        className={timeline === 'one_year' ? 'bg-[blue]' : ''}
+      >
+        1Y
+      </button>
 
-        <button
-          id="ytd"
-          onClick={() => setTimeline('ytd')}
-          className={timeline === 'ytd' ? 'bg-[blue]' : ''}
-        >
-          YTD
-        </button>
+      <button
+        id="ytd"
+        onClick={() => setTimeline('ytd')}
+        className={timeline === 'ytd' ? 'bg-[blue]' : ''}
+      >
+        YTD
+      </button>
 
-        <button
-          id="all"
-          onClick={() => setTimeline('all')}
-          className={timeline === 'all' ? 'bg-[blue]' : ''}
-        >
-          ALL
-        </button>
-      </div>
+      <button
+        id="all"
+        onClick={() => setTimeline('all')}
+        className={timeline === 'all' ? 'bg-[blue]' : ''}
+      >
+        ALL
+      </button>
       <ReactApexChart
         options={options}
         series={series}

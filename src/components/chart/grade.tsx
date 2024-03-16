@@ -10,7 +10,7 @@ const Bar = (props: BarPropType) => {
       <h2 className="w-[110px] font-rubik text-[15px] text-gray-700">
         {props.title}
       </h2>
-      <div className="h-16 basis-full rounded-md bg-gray-300">
+      <div className="h-16 w-full rounded-md bg-gray-300">
         <div
           style={{
             width: props.value + '%',
@@ -35,7 +35,7 @@ const gradeData = [
 
 const Grade = () => {
   return (
-    <div className="flex flex-col gap-[20px]">
+    <div className="flex w-full flex-col gap-[20px]">
       <h2 className="w-[110px] font-rubik text-[24px] font-bold text-gray-700">
         Grade
       </h2>

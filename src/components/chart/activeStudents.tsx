@@ -2,8 +2,8 @@ import Divider from '../common/divider'
 
 const ActiveStudents = () => {
   return (
-    <div className="flex flex-col gap-[20px]">
-      <h2></h2>
+    <div className="flex w-full flex-col gap-[20px]">
+      <h2 className="font-rubik text-[16px] font-medium">Active Students</h2>
       <Divider />
       <div className="flex">
         <div className="w-1/2">

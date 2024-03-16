@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { ApexOptions } from 'apexcharts'
 import ReactApexChart from 'react-apexcharts'
 
-interface PieAgePropType {
+interface DountAgePropType {
   series: number[]
   options: ApexOptions
 }
@@ -28,7 +28,7 @@ const defaultProps = {
     ],
   } as ApexOptions,
 }
-const PieAge = (props: PieAgePropType = defaultProps) => {
+const DountAge = (props: DountAgePropType = defaultProps) => {
   const [state] = useState(props)
   return (
     <div>
@@ -41,4 +41,4 @@ const PieAge = (props: PieAgePropType = defaultProps) => {
   )
 }
 
-export default PieAge
+export default DountAge

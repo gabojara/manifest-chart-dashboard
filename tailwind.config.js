@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        // login: 'url(./assets/bg-login.jpg)',
+        login: 'url(./assets/bg-login.jpg)',
       },
       screens: {
         'desktop-xl': '2300px',

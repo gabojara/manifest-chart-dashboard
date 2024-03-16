@@ -6,6 +6,9 @@ module.exports = {
       backgroundImage: {
         login: 'url(./assets/bg-login.jpg)',
       },
+      fontFamily: {
+        rubik: ['Rubik', 'system-ui', 'sans-serif'],
+      },
       screens: {
         'desktop-xl': '2300px',
         'desktop-l': '1920px',
@@ -32,6 +35,9 @@ module.exports = {
         72: '72px',
         80: '80px',
         120: '120px',
+      },
+      boxShadow: {
+        sdSoft: '0px 2px 15px rgba(47, 49, 53, 0.12)',
       },
     },
   },

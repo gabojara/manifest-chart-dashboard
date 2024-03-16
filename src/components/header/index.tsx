@@ -13,11 +13,11 @@ export const Header = ({ className }: Props) => {
   return (
     <div
       className={cx(
-        'flex w-full items-center justify-between bg-white px-[30px] py-16 shadow-header',
+        'flex w-full items-center justify-between bg-white px-12 mobile:px-24 tablet:px-32  py-16 shadow-header',
         className
       )}
     >
-      <div className="flex items-center gap-24">
+      <div className="flex items-center gap-12 mobile:gap-24">
         <BurgerIcon className="cursor-pointer" />
         <span className="font-rubik text-[32px] font-extrabold uppercase">
           Manifest
@@ -27,7 +27,7 @@ export const Header = ({ className }: Props) => {
           <input className="w-full bg-transparent text-[15px] leading-[150%] outline-none focus:outline-none" />
         </div>
       </div>
-      <div className="flex items-center gap-24">
+      <div className="flex items-center gap-12 mobile:gap-24">
         <SearchIcon
           height={20}
           width={20}
@@ -38,7 +38,7 @@ export const Header = ({ className }: Props) => {
         <img
           src={UserAvatar}
           alt="user-avatar"
-          className="size-[43px] cursor-pointer rounded-[48px]"
+          className="size-32 cursor-pointer rounded-[48px] mobile:size-40"
         />
       </div>
     </div>

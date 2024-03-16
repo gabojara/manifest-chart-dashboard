@@ -3,7 +3,7 @@ import ChartCard from '../components/card/chartCard'
 
 export const Dashboard = () => {
   return (
-    <div className="w-full bg-[#FFFDF4] p-[100px] px-24 mobile:px-32 tablet:px-64 desktop-s:px-[100px]">
+    <div className="w-full bg-[#FFFDF4] p-[100px] px-24 pt-[60px] mobile:px-32 mobile:pt-80 tablet:px-64 tablet:pt-[100px] desktop-s:px-[100px]">
       <div className="flex w-full flex-col items-center justify-start py-[20px] desktop:flex-row desktop:justify-between">
         <span className="self-start py-40 font-rubik text-[24px] font-bold leading-[0%] mobile:text-[32px] tablet:text-[40px] desktop:self-center">
           Manifest Analytics Dashboard

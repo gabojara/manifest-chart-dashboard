@@ -7,7 +7,7 @@ export const Footer = ({ className }: Props) => {
   return (
     <div
       className={cx(
-        'flex w-full items-center gap-16 tablet:justify-between bg-white px-32 py-24 text-[16px] leading-[120%] tablet:flex-row flex-col shadow-sdSoft',
+        'flex w-full items-center gap-12 tablet:justify-between bg-white px-32 py-12 mobile:py-16 tablet:py-24 text-[16px] leading-[120%] tablet:flex-row flex-col shadow-sdSoft',
         className
       )}
     >

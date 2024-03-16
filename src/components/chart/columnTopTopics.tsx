@@ -1,4 +1,4 @@
-import TopTopics from '../../assets/TopDiscussedTopics.png'
+import TopTopics from '../../assets/top-discussed-topics.png'
 
 const ColumnTopTopics = () => {
   return (

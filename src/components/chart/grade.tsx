@@ -1,3 +1,4 @@
+import Divider from '../common/divider'
 interface BarPropType {
   title: string
   value: number
@@ -36,10 +37,8 @@ const gradeData = [
 const Grade = () => {
   return (
     <div className="flex w-full flex-col gap-[20px]">
-      <h2 className="w-[110px] font-rubik text-[24px] font-bold text-gray-700">
-        Grade
-      </h2>
-      <div className="h-px w-full bg-gray-700" />
+      <h2 className="font-rubik text-[16px] font-medium">Grade</h2>
+      <Divider />
       <div className="flex flex-col gap-20">
         {gradeData.map((item, index) => {
           return <Bar key={index} {...item} />

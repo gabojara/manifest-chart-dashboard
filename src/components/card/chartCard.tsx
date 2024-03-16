@@ -4,7 +4,7 @@ interface Props {
 
 const ChartCard = ({ children }: Props) => {
   return (
-    <div className="flex items-center justify-center p-[20px] opacity-15 shadow-md">
+    <div className="flex w-full items-center justify-center p-[20px] shadow-sdSoft">
       {children}
     </div>
   )

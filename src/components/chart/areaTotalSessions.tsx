@@ -3,11 +3,11 @@ import { ApexOptions } from 'apexcharts'
 import ReactApexChart from 'react-apexcharts'
 
 interface AreaTotalSessionsPropType {
-  series: {
+  series?: {
     data: number[][]
   }[]
-  options: ApexOptions
-  selection: string
+  options?: ApexOptions
+  selection?: string
 }
 const defaultProps = {
   series: [

@@ -1,10 +1,9 @@
-import { useState } from 'react'
 import { ApexOptions } from 'apexcharts'
 import ReactApexChart from 'react-apexcharts'
 
 interface DountGenderPropType {
-  series: number[]
-  options: ApexOptions
+  series?: number[]
+  options?: ApexOptions
 }
 
 const defaultProps = {
@@ -41,15 +40,13 @@ const defaultProps = {
     ],
   } as ApexOptions,
 }
-const DountGender = (props: DountGenderPropType = defaultProps) => {
-  const [state] = useState(props)
+const DountGender = ({
+  series = defaultProps.series,
+  options = defaultProps.options,
+}: DountGenderPropType) => {
   return (
     <div>
-      <ReactApexChart
-        options={state.options}
-        series={state.series}
-        type="donut"
-      />
+      <ReactApexChart options={options} series={series} type="donut" />
     </div>
   )
 }

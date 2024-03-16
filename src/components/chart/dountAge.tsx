@@ -1,10 +1,9 @@
-import { useState } from 'react'
 import { ApexOptions } from 'apexcharts'
 import ReactApexChart from 'react-apexcharts'
 
 interface DountAgePropType {
-  series: number[]
-  options: ApexOptions
+  series?: number[]
+  options?: ApexOptions
 }
 
 const defaultProps = {
@@ -28,15 +27,13 @@ const defaultProps = {
     ],
   } as ApexOptions,
 }
-const DountAge = (props: DountAgePropType = defaultProps) => {
-  const [state] = useState(props)
+const DountAge = ({
+  series = defaultProps.series,
+  options = defaultProps.options,
+}: DountAgePropType) => {
   return (
     <div>
-      <ReactApexChart
-        options={state.options}
-        series={state.series}
-        type="donut"
-      />
+      <ReactApexChart options={options} series={series} type="donut" />
     </div>
   )
 }

@@ -1,11 +1,14 @@
 /* eslint-disable tailwindcss/migration-from-tailwind-2 */
-import cx from 'classnames'
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import cx from 'classnames'
 import { EyeIcon } from '../components/common/icons/eye.svg'
 import { Footer } from '../components/footer'
 
 export const Login = () => {
   const [isEyeOpen, toggleEye] = useState(false)
+  const navigate = useNavigate()
+  const handleLogin = () => navigate('/dashboard')
   return (
     <div className="flex h-screen w-screen items-center justify-center overflow-x-hidden px-16 tablet:px-0">
       <span className="fixed left-0 top-0 h-screen w-screen bg-login bg-cover" />
@@ -51,7 +54,10 @@ export const Login = () => {
           </div>
         </div>
 
-        <button className="w-full rounded-[10px] bg-[#4CA7ED] py-12 text-[16px] uppercase text-white hover:bg-blue-500">
+        <button
+          className="w-full rounded-[10px] bg-[#4CA7ED] py-12 text-[16px] uppercase text-white hover:bg-blue-500"
+          onClick={handleLogin}
+        >
           Login
         </button>
         <div className="font-rubik text-[15px]">

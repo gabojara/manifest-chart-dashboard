@@ -1,11 +1,7 @@
 import AverageSessions from '../../assets/average-sessions.png'
 
 const ColumnAverageSession = () => {
-  return (
-    <div>
-      <img src={AverageSessions} alt="" />
-    </div>
-  )
+  return <img className="w-full" src={AverageSessions} alt="" />
 }
 
 export default ColumnAverageSession

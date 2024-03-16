@@ -7,7 +7,9 @@ export const Dashboard = () => {
       <ChartCard>
         <Chart.Grade />
       </ChartCard>
-      {/* <Chart.AreaTotalSessions /> */}
+      <ChartCard>
+        <Chart.AreaTotalSessions />
+      </ChartCard>
       <ChartCard>
         <Chart.DountGender />
       </ChartCard>

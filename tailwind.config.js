@@ -16,6 +16,7 @@ module.exports = {
         'desktop-s': '1280px',
         'tablet-l': '1024px',
         tablet: '844px',
+        mobile: '540px',
       },
       spacing: {
         2: '2px',

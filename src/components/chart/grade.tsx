@@ -6,11 +6,11 @@ interface BarPropType {
 
 const Bar = (props: BarPropType) => {
   return (
-    <div className="flex items-center gap-[20px]">
+    <div className="flex w-full items-center gap-[20px]">
       <h2 className="w-[110px] font-rubik text-[15px] text-gray-700">
         {props.title}
       </h2>
-      <div className="h-16 w-full rounded-md bg-gray-300">
+      <div className="h-16 flex-1 rounded-md bg-gray-300">
         <div
           style={{
             width: props.value + '%',

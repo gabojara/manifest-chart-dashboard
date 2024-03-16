@@ -1,11 +1,13 @@
 interface Props {
   className?: string
+  height?: number
+  width?: number
 }
 
-export const SearchIcon = ({ className }: Props) => (
+export const SearchIcon = ({ height, width, className }: Props) => (
   <svg
-    width="16"
-    height="17"
+    width={height?.toString() ?? '16'}
+    height={width?.toString() ?? '17'}
     viewBox="0 0 16 17"
     fill="none"
     className={className}

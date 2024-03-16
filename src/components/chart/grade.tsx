@@ -7,8 +7,8 @@ interface BarPropType {
 
 const Bar = (props: BarPropType) => {
   return (
-    <div className="flex w-full items-center gap-[20px]">
-      <h2 className="w-[110px] font-rubik text-[15px] text-gray-700">
+    <div className="flex w-full justify-center gap-[20px]">
+      <h2 className="w-[110px] font-rubik text-[15px] font-medium text-[#6F7274]">
         {props.title}
       </h2>
       <div className="h-16 flex-1 rounded-md bg-gray-300">
@@ -21,7 +21,7 @@ const Bar = (props: BarPropType) => {
           }}
         />
       </div>
-      <h2 className="w-40 font-rubik text-[16px] text-gray-700">
+      <h2 className="w-40 font-rubik text-[16px] text-[#6F7274]">
         {`${props.value}%`}
       </h2>
     </div>
@@ -39,7 +39,7 @@ const Grade = () => {
     <div className="flex w-full flex-col gap-[20px]">
       <h2 className="font-rubik text-[16px] font-medium">Grade</h2>
       <Divider />
-      <div className="flex flex-col gap-20">
+      <div className="flex flex-col gap-[20px]">
         {gradeData.map((item, index) => {
           return <Bar key={index} {...item} />
         })}

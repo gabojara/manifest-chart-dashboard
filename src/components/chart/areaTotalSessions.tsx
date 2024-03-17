@@ -169,9 +169,7 @@ const AreaTotalSessions = ({
         <div className="relative">
           <div
             onClick={toggleDropdown}
-
             className="inline-flex w-[100px] items-center justify-between rounded-md border border-gray-200 bg-gray-200 px-10 py-8 font-rubik text-[16px] text-black hover:bg-gray-50"
-
             id="options-menu"
             aria-haspopup="true"
             aria-expanded={isOpen ? 'true' : 'false'}

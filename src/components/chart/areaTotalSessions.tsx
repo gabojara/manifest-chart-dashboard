@@ -68,7 +68,7 @@ const defaultProps = {
     //       yAxisIndex: 0,
     //       label: {
     //         show: true,
-    //         text: 'Rally',
+    //         text: 'RALLy',
     //         style: {
     //           color: '#fff',
     //           background: '#775DD0',
@@ -107,7 +107,7 @@ const defaultProps = {
       curve: 'smooth',
     },
   } as unknown as ApexOptions,
-  selection: 'yearly',
+  selection: 'Yearly',
 }
 
 const AreaTotalSessions = ({
@@ -124,7 +124,7 @@ const AreaTotalSessions = ({
 
   useEffect(() => {
     switch (timeline) {
-      case 'monthly':
+      case 'Monthly':
         ApexCharts.exec(
           'area-datetime',
           'zoomX',
@@ -132,7 +132,7 @@ const AreaTotalSessions = ({
           new Date('27 Feb 2013').getTime()
         )
         break
-      case 'halfYear':
+      case 'Half Year':
         ApexCharts.exec(
           'area-datetime',
           'zoomX',
@@ -140,7 +140,7 @@ const AreaTotalSessions = ({
           new Date('27 Feb 2013').getTime()
         )
         break
-      case 'yearly':
+      case 'Yearly':
         ApexCharts.exec(
           'area-datetime',
           'zoomX',
@@ -148,7 +148,7 @@ const AreaTotalSessions = ({
           new Date('27 Feb 2013').getTime()
         )
         break
-      case 'all':
+      case 'ALL':
         ApexCharts.exec(
           'area-datetime',
           'zoomX',
@@ -167,7 +167,7 @@ const AreaTotalSessions = ({
         <div className="relative">
           <div
             onClick={toggleDropdown}
-            className="inline-flex w-[100px] items-center justify-center rounded-md border border-gray-300 bg-gray-300 px-10 py-8 font-rubik text-[16px] text-black hover:bg-gray-50"
+            className="inline-flex w-[100px] items-center justify-between rounded-md border border-gray-200 bg-gray-200 px-10 py-8 font-rubik text-[16px] text-black hover:bg-gray-50"
             id="options-menu"
             aria-haspopup="true"
             aria-expanded={isOpen ? 'true' : 'false'}
@@ -183,47 +183,47 @@ const AreaTotalSessions = ({
               aria-labelledby="options-menu"
             >
               <button
-                id="monthly"
+                id="Monthly"
                 onClick={() => {
-                  setTimeline('monthly')
+                  setTimeline('Monthly')
                   toggleDropdown()
                 }}
-                className={timeline === 'monthly' ? 'bg-[blue]' : 'bg-gray-300'}
+                className={timeline === 'Monthly' ? 'bg-[blue]' : 'bg-gray-300'}
               >
-                1M
+                Monthly
               </button>
 
               <button
-                id="halfYear"
+                id="Half Year"
                 onClick={() => {
-                  setTimeline('halfYear')
+                  setTimeline('Half Year')
                   toggleDropdown()
                 }}
                 className={
-                  timeline === 'halfYear' ? 'bg-[blue]' : 'bg-gray-300'
+                  timeline === 'Half Year' ? 'bg-[blue]' : 'bg-gray-300'
                 }
               >
-                6M
+                6 Months
               </button>
 
               <button
-                id="yearly"
+                id="Yearly"
                 onClick={() => {
-                  setTimeline('yearly')
+                  setTimeline('Yearly')
                   toggleDropdown()
                 }}
-                className={timeline === 'yearly' ? 'bg-[blue]' : 'bg-gray-300'}
+                className={timeline === 'Yearly' ? 'bg-[blue]' : 'bg-gray-300'}
               >
-                1Y
+                Yearly
               </button>
 
               <button
-                id="all"
+                id="ALL"
                 onClick={() => {
-                  setTimeline('all')
+                  setTimeline('ALL')
                   toggleDropdown()
                 }}
-                className={timeline === 'all' ? 'bg-[blue]' : 'bg-gray-300'}
+                className={timeline === 'ALL' ? 'bg-[blue]' : 'bg-gray-300'}
               >
                 ALL
               </button>

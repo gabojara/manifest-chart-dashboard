@@ -167,7 +167,7 @@ const AreaTotalSessions = ({
         <div className="relative">
           <div
             onClick={toggleDropdown}
-            className="inline-flex w-[100px] items-center justify-between rounded-md border border-gray-200 bg-gray-200 px-10 py-8 font-rubik text-[16px] text-black hover:bg-gray-50"
+            className="inline-flex w-[100px] items-center justify-between rounded-md border border-[#FFFDF4] bg-[#FFFDF4] px-10 py-8 font-rubik text-[16px] text-black hover:bg-gray-50"
             id="options-menu"
             aria-haspopup="true"
             aria-expanded={isOpen ? 'true' : 'false'}
@@ -188,7 +188,9 @@ const AreaTotalSessions = ({
                   setTimeline('Monthly')
                   toggleDropdown()
                 }}
-                className={timeline === 'Monthly' ? 'bg-[blue]' : 'bg-gray-300'}
+                className={
+                  timeline === 'Monthly' ? 'bg-[blue]' : 'bg-[#FFFDF4]'
+                }
               >
                 Monthly
               </button>
@@ -200,7 +202,7 @@ const AreaTotalSessions = ({
                   toggleDropdown()
                 }}
                 className={
-                  timeline === 'Half Year' ? 'bg-[blue]' : 'bg-gray-300'
+                  timeline === 'Half Year' ? 'bg-[blue]' : 'bg-[#FFFDF4]'
                 }
               >
                 6 Months
@@ -212,7 +214,7 @@ const AreaTotalSessions = ({
                   setTimeline('Yearly')
                   toggleDropdown()
                 }}
-                className={timeline === 'Yearly' ? 'bg-[blue]' : 'bg-gray-300'}
+                className={timeline === 'Yearly' ? 'bg-[blue]' : 'bg-[#FFFDF4]'}
               >
                 Yearly
               </button>
@@ -223,7 +225,7 @@ const AreaTotalSessions = ({
                   setTimeline('ALL')
                   toggleDropdown()
                 }}
-                className={timeline === 'ALL' ? 'bg-[blue]' : 'bg-gray-300'}
+                className={timeline === 'ALL' ? 'bg-[blue]' : 'bg-[#FFFDF4]'}
               >
                 ALL
               </button>

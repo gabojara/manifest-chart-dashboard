@@ -7,37 +7,57 @@ interface DountGenderPropType {
 }
 
 const defaultProps = {
-  series: [44, 55, 41, 17, 15],
+  series: [60, 40],
   options: {
+    colors: ['#FBA1D7', '#6EB6F4'],
     chart: {
       type: 'donut',
+      height: '400px',
+      width: '400px',
+    },
+    labels: ['Female', 'Male'],
+    dataLabels: {
+      enabled: true,
+      formatter: function (val) {
+        return val + '%'
+      },
+    },
+    stroke: {
+      width: 1,
+      colors: ['white'],
     },
     plotOptions: {
       pie: {
+        startAngle: -45,
+        endAngle: 315,
         donut: {
+          size: '50%',
           labels: {
             show: true,
-            total: {
-              showAlways: true,
+            name: {
               show: true,
+              label: 'Gender',
+            },
+            value: {
+              show: true,
+              showAlways: false,
+              fontFamily: 'RUBIK',
+              fontWeight: 'bold',
+              fontSize: '16px',
+            },
+            total: {
+              label: 'Gender',
+              showAlways: false,
+              show: true,
+              fontFamily: 'RUBIK',
+              fontWeight: 'bold',
+              fontSize: '18px',
+              color: '#000000',
             },
           },
         },
       },
     },
-    responsive: [
-      {
-        breakpoint: 480,
-        options: {
-          chart: {
-            width: 200,
-          },
-          legend: {
-            position: 'bottom',
-          },
-        },
-      },
-    ],
   } as ApexOptions,
 }
 const DountGender = ({
@@ -46,7 +66,13 @@ const DountGender = ({
 }: DountGenderPropType) => {
   return (
     <div>
-      <ReactApexChart options={options} series={series} type="donut" />
+      <ReactApexChart
+        width={'400px'}
+        height={'400px'}
+        options={options}
+        series={series}
+        type="donut"
+      />
     </div>
   )
 }

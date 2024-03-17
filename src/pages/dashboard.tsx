@@ -40,10 +40,10 @@ export const Dashboard = () => {
           <Chart.ColumnTopTopics className="col-span-2 w-full" />
         </div>
         <div className="grid h-fit flex-1 grid-cols-2 gap-[20px]">
-          <ChartCard className="col-span-1 w-full">
+          <ChartCard className="w-full md:col-span-2 desktop:col-span-1">
             <Chart.DountAge />
           </ChartCard>
-          <ChartCard className="col-span-1 w-full">
+          <ChartCard className="w-full md:col-span-2 desktop:col-span-1 ">
             <Chart.DountGender />
           </ChartCard>
           <ChartCard className="col-span-2 w-full">
@@ -57,10 +57,10 @@ export const Dashboard = () => {
         <ChartCard className="col-span-2 w-full">
           <Chart.ActiveStudents />
         </ChartCard>
-        <ChartCard className="col-span-1 w-full">
+        <ChartCard className="xs: col-span-2 w-full">
           <Chart.DountAge />
         </ChartCard>
-        <ChartCard className="col-span-1 w-full">
+        <ChartCard className="xs: col-span-2 w-full">
           <Chart.DountGender />
         </ChartCard>
         <ChartCard className="col-span-2 w-full">

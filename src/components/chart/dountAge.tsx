@@ -22,6 +22,8 @@ const defaultProps = {
     },
     plotOptions: {
       pie: {
+        size: 200,
+        customScale: 1,
         startAngle: -45,
         endAngle: 315,
         donut: {
@@ -61,15 +63,12 @@ const DountAge = ({
   options = defaultProps.options,
 }: DountAgePropType) => {
   return (
-    <div>
-      <ReactApexChart
-        height={'400px'}
-        width={'400px'}
-        options={options}
-        series={series}
-        type="donut"
-      />
-    </div>
+    <ReactApexChart
+      className="flex size-[400px] items-center justify-between"
+      options={options}
+      series={series}
+      type="donut"
+    />
   )
 }
 

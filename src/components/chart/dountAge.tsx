@@ -56,6 +56,16 @@ const defaultProps = {
         },
       },
     },
+    legend: {
+      show: true,
+      fontSize: '12px',
+      fontFamily: 'Rubik',
+      markers: {
+        radius: 2,
+      },
+      position: 'right',
+      offsetY: 50,
+    },
   } as ApexOptions,
 }
 const DountAge = ({

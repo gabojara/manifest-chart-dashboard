@@ -57,6 +57,14 @@ const defaultProps = {
         },
       },
     },
+    legend: {
+      show: true,
+      markers: {
+        radius: 2,
+      },
+      position: 'right',
+      offsetY: 50,
+    },
   } as ApexOptions,
 }
 const DountGender = ({

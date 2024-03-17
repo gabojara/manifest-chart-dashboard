@@ -45,40 +45,10 @@ const defaultProps = {
       type: 'area',
       height: 350,
       zoom: {
-        autoScaleYaxis: true,
+        enabled: false,
+        autoScaleYaxis: false,
       },
     },
-    // annotations: {
-    //   yaxis: [
-    //     {
-    //       y: 30,
-    //       borderColor: '#999',
-    //       label: {
-    //         show: true,
-    //         text: 'Support',
-    //         style: {
-    //           color: '#fff',
-    //           background: '#00E396',
-    //         },
-    //       },
-    //     },
-    //   ],
-    //   xaxis: [
-    //     {
-    //       x: new Date('14 Nov 2012').getTime(),
-    //       borderColor: '#999',
-    //       yAxisIndex: 0,
-    //       label: {
-    //         show: true,
-    //         text: 'RALLy',
-    //         style: {
-    //           color: '#fff',
-    //           background: '#775DD0',
-    //         },
-    //       },
-    //     },
-    //   ],
-    // },
     dataLabels: {
       enabled: false,
     },

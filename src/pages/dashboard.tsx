@@ -41,10 +41,10 @@ export const Dashboard = () => {
         </div>
         <div className="grid h-fit flex-1 grid-cols-2 gap-[20px]">
           <ChartCard className="col-span-1 w-full">
-            <Chart.DountGender />
+            <Chart.DountAge />
           </ChartCard>
           <ChartCard className="col-span-1 w-full">
-            <Chart.DountAge />
+            <Chart.DountGender />
           </ChartCard>
           <ChartCard className="col-span-2 w-full">
             <Chart.Grade />
@@ -58,10 +58,10 @@ export const Dashboard = () => {
           <Chart.ActiveStudents />
         </ChartCard>
         <ChartCard className="col-span-1 w-full">
-          <Chart.DountGender />
+          <Chart.DountAge />
         </ChartCard>
         <ChartCard className="col-span-1 w-full">
-          <Chart.DountAge />
+          <Chart.DountGender />
         </ChartCard>
         <ChartCard className="col-span-2 w-full">
           <Chart.AreaTotalSessions />

@@ -7,6 +7,7 @@ import { ForwardDownIcon } from '../common/icons/forwardDown.svg'
 interface AreaTotalSessionsPropType {
   series?: {
     data: number[][]
+    name?: string
   }[]
   options?: ApexOptions
   selection?: string
@@ -14,9 +15,10 @@ interface AreaTotalSessionsPropType {
 const defaultProps = {
   series: [
     {
+      name: 'Total Sessions',
       data: [
         [1327359600000, 30],
-        [1328137200000, 31],
+        [1328137200000, 32],
         [1329260400000, 42],
         [1330470000000, 72],
         [1331679600000, 83],
@@ -167,7 +169,9 @@ const AreaTotalSessions = ({
         <div className="relative">
           <div
             onClick={toggleDropdown}
+
             className="inline-flex w-[100px] items-center justify-between rounded-md border border-gray-200 bg-gray-200 px-10 py-8 font-rubik text-[16px] text-black hover:bg-gray-50"
+
             id="options-menu"
             aria-haspopup="true"
             aria-expanded={isOpen ? 'true' : 'false'}

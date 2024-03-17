@@ -74,7 +74,7 @@ const DountAge = ({
 }: DountAgePropType) => {
   return (
     <ReactApexChart
-      className="flex size-[400px] items-center justify-between"
+      className="flex w-[400px] items-center justify-between"
       options={options}
       series={series}
       type="donut"

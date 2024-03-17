@@ -73,7 +73,7 @@ const DountGender = ({
 }: DountGenderPropType) => {
   return (
     <ReactApexChart
-      className="flex size-[370px] items-center justify-between"
+      className="flex w-[370px] items-center justify-between"
       options={options}
       series={series}
       type="donut"

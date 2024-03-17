@@ -11,8 +11,6 @@ const defaultProps = {
   options: {
     chart: {
       type: 'donut',
-      height: '400px',
-      width: '400px',
     },
     colors: ['#F28E50', '#B2FC95', '#F8EBBB', '#6EB6F4'],
     labels: ['18- years', '19 -24 years', '25-34 years', '35+ years'],
@@ -65,8 +63,8 @@ const DountAge = ({
   return (
     <div>
       <ReactApexChart
-        width={'400px'}
         height={'400px'}
+        width={'400px'}
         options={options}
         series={series}
         type="donut"

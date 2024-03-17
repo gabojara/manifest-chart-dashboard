@@ -12,8 +12,6 @@ const defaultProps = {
     colors: ['#FBA1D7', '#6EB6F4'],
     chart: {
       type: 'donut',
-      height: '400px',
-      width: '400px',
     },
     labels: ['Female', 'Male'],
     dataLabels: {
@@ -65,15 +63,13 @@ const DountGender = ({
   options = defaultProps.options,
 }: DountGenderPropType) => {
   return (
-    <div>
-      <ReactApexChart
-        width={'400px'}
-        height={'400px'}
-        options={options}
-        series={series}
-        type="donut"
-      />
-    </div>
+    <ReactApexChart
+      width={370}
+      height={370}
+      options={options}
+      series={series}
+      type="donut"
+    />
   )
 }
 

@@ -26,6 +26,7 @@ const defaultProps = {
     },
     plotOptions: {
       pie: {
+        customScale: 1,
         startAngle: -45,
         endAngle: 315,
         donut: {
@@ -64,8 +65,7 @@ const DountGender = ({
 }: DountGenderPropType) => {
   return (
     <ReactApexChart
-      width={370}
-      height={370}
+      className="flex size-[370px] items-center justify-between"
       options={options}
       series={series}
       type="donut"

@@ -18,6 +18,11 @@ const AreaTotalSessions = () => {
         enabled: false,
         autoScaleYaxis: false,
       },
+      toolbar: {
+        tools: {
+          download: false,
+        },
+      },
     },
     dataLabels: {
       enabled: false,

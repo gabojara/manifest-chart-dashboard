@@ -33,7 +33,7 @@ const Bar = (props: BarPropType) => {
 const Grade = () => {
   return (
     <div className="flex w-full flex-col gap-[20px]">
-      <h2 className="font-rubik text-[16px] font-medium">Grade</h2>
+      <h2 className="font-rubik text-[16px] font-medium">GRADE</h2>
       <Divider />
       <div className="flex flex-col gap-[20px] pt-10">
         {gradeData.grade.map((item, index) => {

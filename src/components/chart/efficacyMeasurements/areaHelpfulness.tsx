@@ -9,6 +9,15 @@ const AreaHelpfulness = () => {
     chart: {
       height: 215,
       type: 'area',
+      zoom: {
+        enabled: false,
+        autoScaleYaxis: false,
+      },
+      toolbar: {
+        tools: {
+          download: false,
+        },
+      },
     },
     colors: [themeColors.manifest?.green],
     dataLabels: {

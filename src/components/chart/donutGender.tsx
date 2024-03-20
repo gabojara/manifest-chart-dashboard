@@ -26,6 +26,24 @@ const DonutGender = ({}: DonutGenderPropType) => {
       width: 1,
       colors: ['white'],
     },
+    tooltip: {
+      fillSeriesColor: false,
+      theme: 'dark',
+      custom: function ({ series, seriesIndex, dataPointIndex }) {
+        console.log(dataPointIndex, series, seriesIndex)
+        return `<div class="arrow_box" style="padding: 4px 6px; border-radius: 6px;">
+            <div style="display: flex; align-items: center; justify-content: flex-start; gap: 6px">
+              <div style="width: 12px; height: 12px; border-radius: 2px; background-color: ${options.colors?.[seriesIndex]};"></div>
+              <div>${options.labels?.[seriesIndex]}</div>
+              </div>
+            <div style="display: flex; align-items: center; justify-content: flex-start; gap: 6px">
+              <div>Users :</div>
+              <div>${series[seriesIndex]}</div>
+              <div>(${((series[seriesIndex] / series.reduce((accumulator: number, currentValue: number) => accumulator + currentValue, 0)) * 100).toFixed(1)}%)</div>
+            </div>
+          </div>`
+      },
+    },
     plotOptions: {
       pie: {
         customScale: 1,
@@ -37,12 +55,14 @@ const DonutGender = ({}: DonutGenderPropType) => {
             show: true,
             name: {
               show: true,
+              color: themeColors.manifest?.dark,
             },
             value: {
               show: true,
               fontFamily: 'RUBIK',
               fontWeight: 'bold',
               fontSize: '16px',
+              color: themeColors.manifest?.dark,
             },
             total: {
               label: 'Gender',

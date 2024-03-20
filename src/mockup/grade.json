@@ -3,7 +3,7 @@
     {
       "title": "High School",
       "value": 30,
-      "color": "#79D257"
+      "color": "#C0F9A9 "
     },
     {
       "title": "College",
@@ -13,7 +13,7 @@
     {
       "title": "Graduate",
       "value": 20,
-      "color": "#F28E50"
+      "color": "#FFB180"
     }
   ]
 }

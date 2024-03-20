@@ -8,6 +8,15 @@ const ColumnTopTopics = () => {
     chart: {
       height: 200,
       type: 'bar',
+      zoom: {
+        enabled: false,
+        autoScaleYaxis: false,
+      },
+      toolbar: {
+        tools: {
+          download: false,
+        },
+      },
     },
     plotOptions: {
       bar: {

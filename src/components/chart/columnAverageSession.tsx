@@ -7,6 +7,14 @@ const ColumnAverageSession = () => {
   const options: ApexOptions = {
     chart: {
       id: 'basic-bar',
+      toolbar: {
+        tools: {
+          download: false,
+        },
+      },
+    },
+    dataLabels: {
+      enabled: false,
     },
     xaxis: {
       categories: averageSessionData.categories,

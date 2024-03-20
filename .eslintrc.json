@@ -88,7 +88,7 @@
         "ts-check": false
       }
     ],
-    "no-console": "error",
+    // "no-console": "error",
     "import/no-unresolved": "off",
     "no-multiple-empty-lines": [
       "error",

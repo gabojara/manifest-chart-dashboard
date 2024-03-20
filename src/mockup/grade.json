@@ -1,0 +1,19 @@
+{
+  "grade": [
+    {
+      "title": "High School",
+      "value": 30,
+      "color": "#79D257"
+    },
+    {
+      "title": "College",
+      "value": 50,
+      "color": "#6EB6F4"
+    },
+    {
+      "title": "Graduate",
+      "value": 20,
+      "color": "#F28E50"
+    }
+  ]
+}

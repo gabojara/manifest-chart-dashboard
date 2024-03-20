@@ -1,0 +1,31 @@
+{
+  "series": [
+    {
+      "name": "Inflation",
+      "data": [
+        20,
+        31,
+        40,
+        11,
+        80,
+        36,
+        45,
+        3.6,
+        6.7,
+        43
+      ]
+    }
+  ],
+  "categories": [
+    "Stress Management",
+    "Relationship",
+    "Self-estimate",
+    "Anxiety",
+    "Mindfulness",
+    "Productivity",
+    "Sleep",
+    "Meditation",
+    "Motivation",
+    "Well-beings"
+  ]
+}

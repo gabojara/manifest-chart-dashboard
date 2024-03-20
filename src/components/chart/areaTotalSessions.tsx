@@ -1,45 +1,15 @@
 import { useState, useEffect } from 'react'
 import { ApexOptions } from 'apexcharts'
 import ReactApexChart from 'react-apexcharts'
-import Divider from '../common/divider'
-import { ForwardDownIcon } from '../common/icons/forwardDown.svg'
+import Divider from 'components/common/divider'
+import { useTheme } from 'hooks'
+import { ForwardDownIcon } from 'components/common/icons/forwardDown.svg'
+import totalSessionsData from 'mockup/totalSessions.json'
 
-interface AreaTotalSessionsPropType {
-  series?: {
-    data: number[][]
-    name?: string
-  }[]
-  options?: ApexOptions
-  selection?: string
-}
-const defaultProps = {
-  series: [
-    {
-      name: 'Total Sessions',
-      data: [
-        [1327359600000, 30],
-        [1328137200000, 32],
-        [1329260400000, 42],
-        [1330470000000, 72],
-        [1331679600000, 83],
-        [1332885600000, 84],
-        [1334095200000, 73],
-        [1335996000000, 57],
-        [1337292000000, 46],
-        [1338847200000, 50],
-        [1341957600000, 58],
-        [1343253600000, 40],
-        [1344808800000, 32],
-        [1348696800000, 79],
-        [1354748400000, 55],
-        [1356908400000, 28],
-        [1358809200000, 17],
-        [1360796400000, 28],
-        [1361919600000, 39],
-      ],
-    },
-  ],
-  options: {
+const AreaTotalSessions = () => {
+  const { themeColors } = useTheme()
+  const options: ApexOptions = {
+    colors: [themeColors.manifest?.blue],
     chart: {
       id: 'area-datetime',
       type: 'area',
@@ -54,11 +24,11 @@ const defaultProps = {
     },
     markers: {
       size: 0,
-      style: 'hollow',
+      // style: 'hollow',
     },
     xaxis: {
       type: 'datetime',
-      min: new Date('01 Mar 2012').getTime(),
+      min: new Date('01 Jan 2023').getTime(),
       tickAmount: 6,
     },
     tooltip: {
@@ -78,16 +48,8 @@ const defaultProps = {
     stroke: {
       curve: 'smooth',
     },
-  } as unknown as ApexOptions,
-  selection: 'Yearly',
-}
-
-const AreaTotalSessions = ({
-  options = defaultProps.options,
-  series = defaultProps.series,
-  selection = defaultProps.selection,
-}: AreaTotalSessionsPropType) => {
-  const [timeline, setTimeline] = useState(selection)
+  }
+  const [timeline, setTimeline] = useState('Yearly')
   const [isOpen, setIsOpen] = useState(false)
 
   const toggleDropdown = () => {
@@ -100,32 +62,32 @@ const AreaTotalSessions = ({
         ApexCharts.exec(
           'area-datetime',
           'zoomX',
-          new Date('28 Jan 2013').getTime(),
-          new Date('27 Feb 2013').getTime()
+          new Date('28 Jan 2023').getTime(),
+          new Date('27 Feb 2023').getTime()
         )
         break
       case 'Half Year':
         ApexCharts.exec(
           'area-datetime',
           'zoomX',
-          new Date('27 Sep 2012').getTime(),
-          new Date('27 Feb 2013').getTime()
+          new Date('1 Jan 2023').getTime(),
+          new Date('20 June 2023').getTime()
         )
         break
       case 'Yearly':
         ApexCharts.exec(
           'area-datetime',
           'zoomX',
-          new Date('27 Feb 2012').getTime(),
-          new Date('27 Feb 2013').getTime()
+          new Date('1 Jan 2023').getTime(),
+          new Date('27 Dec 2023').getTime()
         )
         break
       case 'ALL':
         ApexCharts.exec(
           'area-datetime',
           'zoomX',
-          new Date('23 Jan 2012').getTime(),
-          new Date('27 Feb 2013').getTime()
+          new Date('23 Jan 2023').getTime(),
+          new Date('27 Dec 2023').getTime()
         )
         break
       default:
@@ -207,9 +169,9 @@ const AreaTotalSessions = ({
       <div className="w-full">
         <ReactApexChart
           options={options}
-          series={series}
+          series={totalSessionsData.series}
           type="area"
-          height={350}
+          height={210}
         />
       </div>
     </div>

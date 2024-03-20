@@ -9,7 +9,7 @@ const ChartCard = ({ children, className }: Props) => {
   return (
     <div
       className={cx(
-        'flex w-full items-center justify-center rounded-[16px] bg-white p-[20px] shadow-sdSoft',
+        'flex w-full items-center justify-center rounded-[16px] bg-white p-[20px] shadow-sdSoft hover:shadow-[#2F313544]',
         className
       )}
     >

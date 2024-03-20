@@ -1,0 +1,25 @@
+{
+  "value": 10,
+  "labels": [
+    {
+      "grade": "positive",
+      "color": "#64E66A"
+    },
+    {
+      "grade": "moderately positive",
+      "color": "#B2FC95"
+    },
+    {
+      "grade": "neutral",
+      "color": "#F8EBBB"
+    },
+    {
+      "grade": "moderately negative",
+      "color": "#FFB180"
+    },
+    {
+      "grade": "negative",
+      "color": "#FF8888"
+    }
+  ]
+}

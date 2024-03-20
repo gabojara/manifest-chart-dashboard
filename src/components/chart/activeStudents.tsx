@@ -1,4 +1,4 @@
-import Divider from '../common/divider'
+import Divider from 'components/common/divider'
 
 const ActiveStudents = () => {
   return (
@@ -7,11 +7,15 @@ const ActiveStudents = () => {
       <Divider />
       <div className="flex">
         <div className="w-1/2">
-          <h3 className="font-rubik text-[40px] font-semibold">120</h3>
+          <h3 className="p-0 font-rubik text-[40px] font-semibold leading-none">
+            120
+          </h3>
           <p className="font-rubik text-[14px] font-medium">Last 7 Days</p>
         </div>
         <div className="w-1/2">
-          <h3 className="font-rubik text-[40px] font-semibold">1000</h3>
+          <h3 className="p-0 font-rubik text-[40px] font-semibold leading-none">
+            1000
+          </h3>
           <p className="font-rubik text-[14px] font-medium">Last 30 Days</p>
         </div>
       </div>

@@ -1,8 +1,8 @@
 import cx from 'classnames'
-import { AlarmIcon } from '../common/icons/alarm.svg'
-import { BurgerIcon } from '../common/icons/burger.svg'
-import { ChatIcon } from '../common/icons/chat.svg'
-import { SearchIcon } from '../common/icons/search.svg'
+import { AlarmIcon } from 'components/common/icons/alarm.svg'
+import { BurgerIcon } from 'components/common/icons/burger.svg'
+import { ChatIcon } from 'components/common/icons/chat.svg'
+import { SearchIcon } from 'components/common/icons/search.svg'
 import UserAvatar from '../../assets/user-photo.png'
 
 interface Props {

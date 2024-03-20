@@ -9,6 +9,7 @@ export const Login = () => {
   const [isEyeOpen, toggleEye] = useState(false)
   const navigate = useNavigate()
   const handleLogin = () => navigate('/dashboard')
+
   return (
     <div className="flex h-screen w-screen items-center justify-center overflow-x-hidden px-16 tablet:px-0">
       <span className="fixed left-0 top-0 h-screen w-screen bg-login bg-cover" />

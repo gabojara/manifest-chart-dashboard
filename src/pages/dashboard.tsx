@@ -34,23 +34,35 @@ export const Dashboard = () => {
           <ChartCard className="col-span-2 w-full">
             <Chart.AreaTotalSessions />
           </ChartCard>
-          <Chart.AreaSessionLength className="col-span-1 w-full" />
-          <Chart.ColumnAverageSession className="col-span-1 w-full" />
-          <Chart.HeatMapPeakUsageTime className="col-span-2 w-full" />
-          <Chart.ColumnTopTopics className="col-span-2 w-full" />
+          <ChartCard className="col-span-1 w-full">
+            <Chart.AreaSessionLength />
+          </ChartCard>
+          <ChartCard className="col-span-1 w-full">
+            <Chart.ColumnAverageSession />
+          </ChartCard>
+          <ChartCard className="col-span-2 w-full">
+            <Chart.HeatMapPeakUsageTime />
+          </ChartCard>
+          <ChartCard className="col-span-2 w-full">
+            <Chart.ColumnTopTopics />
+          </ChartCard>
         </div>
         <div className="grid h-fit flex-1 grid-cols-2 gap-[20px]">
           <ChartCard className="w-full md:col-span-2 desktop:col-span-1">
-            <Chart.DountAge />
+            <Chart.DonutAge />
           </ChartCard>
           <ChartCard className="w-full md:col-span-2 desktop:col-span-1 ">
-            <Chart.DountGender />
+            <Chart.DonutGender />
           </ChartCard>
           <ChartCard className="col-span-2 w-full">
             <Chart.Grade />
           </ChartCard>
-          <Chart.EfficacyMeasurements className="col-span-2 w-full" />
-          <Chart.DountUserSentimentOverview className="col-span-2 w-full" />
+          <ChartCard className="col-span-2 w-full">
+            <Chart.EfficacyMeasurements />
+          </ChartCard>
+          <ChartCard className="col-span-2 w-full">
+            <Chart.DonutUserSentimentOverview />
+          </ChartCard>
         </div>
       </div>
       <div className="grid w-full flex-1 grid-cols-2 gap-[20px] desktop-s:hidden">
@@ -58,10 +70,10 @@ export const Dashboard = () => {
           <Chart.ActiveStudents />
         </ChartCard>
         <ChartCard className="xs: col-span-2 w-full">
-          <Chart.DountAge />
+          <Chart.DonutAge />
         </ChartCard>
         <ChartCard className="xs: col-span-2 w-full">
-          <Chart.DountGender />
+          <Chart.DonutGender />
         </ChartCard>
         <ChartCard className="col-span-2 w-full">
           <Chart.AreaTotalSessions />
@@ -69,12 +81,24 @@ export const Dashboard = () => {
         <ChartCard className="col-span-2 w-full">
           <Chart.Grade />
         </ChartCard>
-        <Chart.AreaSessionLength className="col-span-1 w-full" />
-        <Chart.ColumnAverageSession className="col-span-1 w-full" />
-        <Chart.EfficacyMeasurements className="col-span-2 w-full" />
-        <Chart.HeatMapPeakUsageTime className="col-span-2 w-full" />
-        <Chart.ColumnTopTopics className="col-span-2 w-full" />
-        <Chart.EfficacyMeasurements className="col-span-2 w-full" />
+        <ChartCard className="col-span-1 w-full">
+          <Chart.AreaSessionLength />
+        </ChartCard>
+        <ChartCard className="col-span-1 w-full">
+          <Chart.ColumnAverageSession />
+        </ChartCard>
+        <ChartCard className="col-span-2 w-full">
+          <Chart.EfficacyMeasurements />
+        </ChartCard>
+        <ChartCard className="col-span-2 w-full">
+          <Chart.HeatMapPeakUsageTime />
+        </ChartCard>
+        <ChartCard className="col-span-2 w-full">
+          <Chart.ColumnTopTopics />
+        </ChartCard>
+        <ChartCard className="col-span-2 w-full">
+          <Chart.DonutUserSentimentOverview />
+        </ChartCard>
       </div>
     </div>
   )

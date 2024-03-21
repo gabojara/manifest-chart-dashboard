@@ -106,7 +106,7 @@ const AreaTotalSessions = () => {
         <div className="relative">
           <div
             onClick={toggleDropdown}
-            className="inline-flex w-[100px] items-center justify-between rounded-md border border-gray-200 bg-gray-200 px-10 py-8 font-rubik text-[16px] text-black hover:bg-gray-50"
+            className="inline-flex w-[110px] cursor-pointer select-none items-center justify-between rounded-md border border-gray-100 bg-gray-100 px-10 py-8 font-rubik text-[16px] text-black hover:bg-gray-50"
             id="options-menu"
             aria-haspopup="true"
             aria-expanded={isOpen ? 'true' : 'false'}
@@ -116,7 +116,7 @@ const AreaTotalSessions = () => {
           </div>
           {isOpen && (
             <div
-              className="absolute right-0 z-10 mt-2 flex w-full flex-col"
+              className="absolute right-0 z-10 mt-2 flex w-full flex-col overflow-hidden rounded-md text-left font-rubik text-[12px]"
               role="menu"
               aria-orientation="vertical"
               aria-labelledby="options-menu"
@@ -127,7 +127,17 @@ const AreaTotalSessions = () => {
                   setTimeline('Monthly')
                   toggleDropdown()
                 }}
-                className={timeline === 'Monthly' ? 'bg-[blue]' : 'bg-gray-300'}
+                className="flex w-full items-start px-10 py-8"
+                style={{
+                  backgroundColor:
+                    timeline === 'Monthly'
+                      ? themeColors.manifest?.blueSoft
+                      : '#f2f2f2',
+                  color:
+                    timeline === 'Monthly'
+                      ? themeColors.manifest?.blue
+                      : 'black',
+                }}
               >
                 Monthly
               </button>
@@ -138,9 +148,17 @@ const AreaTotalSessions = () => {
                   setTimeline('Half Year')
                   toggleDropdown()
                 }}
-                className={
-                  timeline === 'Half Year' ? 'bg-[blue]' : 'bg-gray-300'
-                }
+                className="flex w-full items-start px-10 py-8"
+                style={{
+                  backgroundColor:
+                    timeline === 'Half Year'
+                      ? themeColors.manifest?.blueSoft
+                      : '#f2f2f2',
+                  color:
+                    timeline === 'Half Year'
+                      ? themeColors.manifest?.blue
+                      : 'black',
+                }}
               >
                 6 Months
               </button>
@@ -151,7 +169,17 @@ const AreaTotalSessions = () => {
                   setTimeline('Yearly')
                   toggleDropdown()
                 }}
-                className={timeline === 'Yearly' ? 'bg-[blue]' : 'bg-gray-300'}
+                className="flex w-full items-start px-10 py-8"
+                style={{
+                  backgroundColor:
+                    timeline === 'Yearly'
+                      ? themeColors.manifest?.blueSoft
+                      : '#f2f2f2',
+                  color:
+                    timeline === 'Yearly'
+                      ? themeColors.manifest?.blue
+                      : 'black',
+                }}
               >
                 Yearly
               </button>
@@ -162,7 +190,15 @@ const AreaTotalSessions = () => {
                   setTimeline('ALL')
                   toggleDropdown()
                 }}
-                className={timeline === 'ALL' ? 'bg-[blue]' : 'bg-gray-300'}
+                className="flex w-full items-start px-10 py-8"
+                style={{
+                  backgroundColor:
+                    timeline === 'ALL'
+                      ? themeColors.manifest?.blueSoft
+                      : '#f2f2f2',
+                  color:
+                    timeline === 'ALL' ? themeColors.manifest?.blue : 'black',
+                }}
               >
                 ALL
               </button>

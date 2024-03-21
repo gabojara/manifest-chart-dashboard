@@ -19,6 +19,7 @@ export type ColorTypes = {
     gray?: string
     softYellow?: string
     dark?: string
+    blueSoft?: string
   }
   stroke?: string
 }
